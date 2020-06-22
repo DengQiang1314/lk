@@ -34,6 +34,7 @@ eureka:
     preferIpAddress: true
     #    定义实例 id 格式
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+    status-page-url: http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
     #    默认 30 秒，表示 eureka client 发送心跳到 server 端的频率
     lease-renewal-interval-in-seconds: 10
     #    默认 90 秒，表示 eureka server 至上一次收到 client 的心跳之后等待下一次心跳的超时时间，在这段时间过后没有收到心跳就会移除该 instance （实例）
