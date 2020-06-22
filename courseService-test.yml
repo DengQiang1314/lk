@@ -21,6 +21,24 @@ spring:
       username: root
       password: 123456
       url: jdbc:mysql:///lk_user?serverTimezone=Asia/Shanghai
+#  redis 配置
+  redis:
+    database: 0
+    host: 192.168.206.130
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+#  rabbitmq 配置
+  rabbitmq:
+    host: 192.168.206.130
+    port: 5672
+    username: sang
+    password: 123456
 
 eureka:
   client:
