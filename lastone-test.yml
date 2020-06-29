@@ -75,3 +75,9 @@ feign:
       enabled: true
   hystrix:
     enabled: true
+
+zuul:
+  routes:
+    test:
+      path: /test1/**
+      url: forward:/test2
